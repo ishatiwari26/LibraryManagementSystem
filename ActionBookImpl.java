@@ -13,13 +13,7 @@ public class ActionBookImpl implements BooksInterface {
 
 	@Override
 	public void displayBooks(BooksBeans beanBook) {
-		List<BooksBeans> book1 = BooksFactory.addBooks();
-		/*
-		 * BooksBeans book = book1.stream().filter((p) -> p.getCatId() ==
-		 * beanBook.getCatId()).findAny().orElse(null);
-		 * System.out.println(book.getCatId() + " :: " + book.getAuthor() +
-		 * " :: " + book.getTitle());
-		 */
+		List<BooksBeans> book1 = BooksFactory.addBooks();	
 
 		book1.stream().filter((p) -> p.getCatId() == beanBook.getCatId()).forEach(System.out::println);
 	}
